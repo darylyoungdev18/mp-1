@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/project.css">
+   
     <title>Daryl Young Resume | Project</title>
 </head>
 <body>
@@ -129,67 +130,6 @@
             <p>All Rights Reserved by Daryl Young <a href=""> Credits</a >&copy; </p>
         </footer>
     </div>
-    <script>
-        num1 = document.getElementById('num1');
-        num2 = document.getElementById('num2');
-        add = document.getElementById('addition');
-        subtract = document.getElementById('subtraction');
-        multiply = document.getElementById('multiplication');
-        divide = document.getElementById('division');
-        exponent = document.getElementById('exponential');
-        clear = document.getElementById('clear');
-        result = document.getElementById('result');
-        
-        function checkInput(){
-            if (num1.value === '' || num2.value === '') {
-            alert('Please enter a number');
-        };
-        };
-        function clearInput(){
-            num1.value = '';
-            num2.value = '';
-            result.innerHTML = '';
-        };
-
-        add.addEventListener('click', function(e){
-            e.preventDefault();
-            checkInput();
-            result.innerHTML = parseInt(num1.value) + parseInt(num2.value);
-        });
-        subtract.addEventListener('click', function(e){
-            checkInput();
-            e.preventDefault();
-            result.innerHTML = parseInt(num1.value) - parseInt(num2.value);
-        });
-        multiply.addEventListener('click', function(e){
-            e.preventDefault();
-            checkInput();
-            result.innerHTML = parseInt(num1.value) * parseInt(num2.value);
-        });
-        divide.addEventListener('click', function(e){
-            e.preventDefault();
-            checkInput();
-            result.innerHTML = parseInt(num1.value) / parseInt(num2.value);
-        }); 
-        clear.addEventListener('click', function(e){
-            e.preventDefault();
-            clearInput();
-        });
-        exponent.addEventListener('click', function(e) {
-            e.preventDefault();
-            checkInput();
-            let resultNumber = parseInt(num1.value);
-            for(let i = 0; i < parseInt(num2.value); i++ ){
-                resultNumber = resultNumber * parseInt(num1.value);
-                console.log(resultNumber);
-                result.innerHTML ="";
-                result.innerHTML = resultNumber;
-
-            }
-        });
-        
-
-        
-    </script>
+    <script src="script.js"></script> 
 </body>
 </html>
