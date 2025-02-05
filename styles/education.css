@@ -1,0 +1,32 @@
+.education-title h2{
+    font-size: calc(5px + 2vw);
+}
+.degree-info{
+    border: 5px solid white;
+    margin: auto auto 5% auto;
+
+}
+.degree{
+    border-bottom:2px solid white;
+    margin:0;
+    padding: 3% 0 3% 0;
+    background-color: #1d1da3;
+}
+.school{
+    border-bottom:2px solid white;
+    margin:0;
+    padding: 3% 0 3% 0;
+    background-color: #9b1197;
+    
+}
+.grad-date{
+    margin:0;
+    padding: 3% 0 3% 0;
+    background-color: #7911ad;
+}
+
+@media screen and (max-width: 900px){
+    .education-title h2{
+        font-size: calc(5px + 7vw);
+    }
+}

@@ -1,0 +1,114 @@
+html,
+body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Roboto', sans-serif; 
+}
+.top-wrapper{
+    width:100%;
+    height:100%;
+}
+header h1{
+        background: #93cdfe;
+        margin: 0;
+        padding: 3rem 1rem;
+        text-align: center;
+        font-size: calc(5px + 2vw);
+}
+.content-wrapper{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    min-height:82vh;
+}
+.nav-container{
+    text-align: center;
+    background: #c3c3c3;
+}
+nav ul{
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li{
+    width: 80%;
+    padding: 6% 3%;
+    margin: 10%;
+    background: linear-gradient(to right, #0b00cf, #ff2d2b);
+    color: white;
+    border-radius: 3rem;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: calc(2px + 1.2vw);
+}
+nav a:hover{
+    text-decoration: underline;
+}
+main{
+    background: #bb2a2a;
+    color: white;
+    text-align:center;
+    padding:2% 3%;
+}
+main h2{
+    font-size: calc(4px + 1.5vw);
+}
+main h3{
+    font-size: calc(4px + 1.3vw);
+}
+main p{
+    font-size: calc(2px + 1.1vw);
+}
+.resume-image img{
+    max-width: 70%;
+}
+footer{
+    background: #93cdfe;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+footer p{
+    font-size: calc(1px + 1vw);
+}
+
+@media screen and (max-width:900px){
+    header h1{
+        font-size: calc(5px + 7vw);
+    }
+    .content-wrapper{
+        grid-template-columns: 1fr;
+    }
+    .nav-container {
+        padding:3%
+    }
+    nav ul{
+        display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+    nav ul li{
+        border-radius: 1rem;
+        margin: 2%;
+        min-width: 7%;
+    }
+    nav a{
+        font-size: calc(5px + 3vw);
+    }
+    main h2{
+        font-size: calc(5px + 3.4vw);
+    }
+    main p{
+        font-size: calc(5px + 3vw);
+    }
+    footer p{
+        font-size: calc(5px + 3vw);
+    }
+}

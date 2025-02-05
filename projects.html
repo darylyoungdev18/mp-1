@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/project.css">
+    <title>Daryl Young Resume | Project</title>
+</head>
+<body>
+    <div class="top-wrapper">
+        <div id="wrapper">
+            <header>
+                <h1>Daryl Young Resume</h1>
+                </header>
+                <div class="content-wrapper">
+                    <div class="nav-container">
+                        <nav>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="education.html">Education</a></li>
+                                <li><a href="work-experience.html">Work Experience</a></li>
+                                <li><a href="technical-skills.html">Technical Skills</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="about.html">About </a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                <main>
+                    <div class="project-title-section">
+                        <h2> Projects </h2>
+                        
+                    </div>
+                    <div class="project-section">
+                        <div class="project-info">
+                            <h3>Oops All Travel</h3>
+                            <div class="project-image">
+                                <img src="assets\oops-all-travel-pic.JPG" alt="Oops All Travel">
+                            </div>
+                            <div class="project-description">
+                                <h3>Overview</h3>
+                                <p>
+                                    Create a social network web site exclusively catered to any one interested in traveling.
+                                </p>
+                                <p>
+                                    blogs and blogs were created by different users, assigned to a specified location in the world
+                                    and shared for all to see.
+                                </p>
+                                <p>
+                                    A guest could view travel blogs and vlogs from different places in the world, but can only 
+                                    like a blog or vlog if they are a registered user.
+                                </p>
+                                <p class="tech-used">Technologies Used</p>
+                                <ul>
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>JavaScript</li>
+                                    <li>Node.js</li>
+                                    <li>Express</li>
+                                    <li>MySQL</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>New Haven Bank Website </h3>
+                            <div class="project-image">
+                                <img src="assets\nhb-img.JPG" alt="New Haven Bank ">
+                            </div>
+                            <div class="project-description">
+                                <h3>Overview</h3>
+                                <p>
+                                    Created a new website for a credit union in New Haven, CT.
+                                </p>
+                                <p>
+                                    The website was designed to be market to individuals that were looking to open a new account. As well
+                                    as provide visiors with information on the services that the bank offers 
+                                </p>
+                            
+                                <p class="tech-used">Technologies Used</p>
+                                <ul>
+                                    <li>HTML5</li>
+                                    <li>CSS3</li>
+                                    <li>JavaScript</li>
+                                    <li>PHP</li>
+                                    <li>SQL</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="repo-link">
+                        <p> Check out <a href="https://github.com/darylyoungdev18">my repo</a> to see more projects.</p>
+                        </div>
+                    </div>
+                    <div class="calculator-section">
+                        <h3>Quick Calculator Project</h3>
+                        <div class="calculator">
+                            <form>
+                                <div class="num-entry-section">
+                                <div class="left-num">
+                                <label for="num1">Enter a number</label>
+                                <input type="number" id="num1" name="num1">
+                                </div>
+                                <div class="right-num">
+                                <label for="num2">Enter a number</label>
+                                <input type="number" id="num2" name="num2">
+                                </div>
+                                </div>
+                                <div class="btn-cmd">
+                                <button id="addition" type="submit">Add</button>
+                                <button id="subtraction" type="submit">Subtract</button>
+                                <button id="multiplication" type="submit">Multiply</button>
+                                <button id="division" type="submit">Divide</button>
+                                <button id="exponential" type="submit">exponential</button>
+                                <button id="clear" type="submit">Clear</button>
+                                </div>
+                            </form>
+                            <div class="result">
+                                <p>Result: </p>
+                                <p id="result"></p>
+                        </div>
+                    </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <footer>
+            <p>All Rights Reserved by Daryl Young <a href=""> Credits</a >&copy; </p>
+        </footer>
+    </div>
+    <script>
+        num1 = document.getElementById('num1');
+        num2 = document.getElementById('num2');
+        add = document.getElementById('addition');
+        subtract = document.getElementById('subtraction');
+        multiply = document.getElementById('multiplication');
+        divide = document.getElementById('division');
+        exponent = document.getElementById('exponential');
+        clear = document.getElementById('clear');
+        result = document.getElementById('result');
+        
+        function checkInput(){
+            if (num1.value === '' || num2.value === '') {
+            alert('Please enter a number');
+        };
+        };
+        function clearInput(){
+            num1.value = '';
+            num2.value = '';
+            result.innerHTML = '';
+        };
+
+        add.addEventListener('click', function(e){
+            e.preventDefault();
+            checkInput();
+            result.innerHTML = parseInt(num1.value) + parseInt(num2.value);
+        });
+        subtract.addEventListener('click', function(e){
+            checkInput();
+            e.preventDefault();
+            result.innerHTML = parseInt(num1.value) - parseInt(num2.value);
+        });
+        multiply.addEventListener('click', function(e){
+            e.preventDefault();
+            checkInput();
+            result.innerHTML = parseInt(num1.value) * parseInt(num2.value);
+        });
+        divide.addEventListener('click', function(e){
+            e.preventDefault();
+            checkInput();
+            result.innerHTML = parseInt(num1.value) / parseInt(num2.value);
+        }); 
+        clear.addEventListener('click', function(e){
+            e.preventDefault();
+            clearInput();
+        });
+        exponent.addEventListener('click', function(e) {
+            e.preventDefault();
+            checkInput();
+            let resultNumber = parseInt(num1.value);
+            for(let i = 0; i < parseInt(num2.value); i++ ){
+                resultNumber = resultNumber * parseInt(num1.value);
+                console.log(resultNumber);
+                result.innerHTML ="";
+                result.innerHTML = resultNumber;
+
+            }
+        });
+        
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.about-section h2{
+    font-size: calc(5px + 2vw);
+}
+
+.about-section p{
+    font-size: calc(2px + 1.5vw);
+    line-height:1.5;
+}
+@media screen and (max-width: 900px){
+    .about-section h2{
+        font-size: calc(5px + 7vw);
+    }
+    .about-section p {
+        font-size: calc(1px + 4vw);
+    }
+}
